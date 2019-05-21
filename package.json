@@ -1,0 +1,21 @@
+{
+  "name": "typescript-alpha-book",
+  "version": "1.0.0",
+  "description": "The beginners guide to TypeScript",
+  "private": true,
+  "scripts": {
+    "start": "docz dev",
+    "build": "docz build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basarat/typescript-alpha-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basarat/typescript-alpha-book/issues"
+  },
+  "homepage": "https://github.com/basarat/typescript-alpha-book#readme"
+}
