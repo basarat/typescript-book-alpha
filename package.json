@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/basarat/typescript-alpha-book/issues"
   },
-  "homepage": "https://github.com/basarat/typescript-alpha-book#readme"
+  "homepage": "https://github.com/basarat/typescript-alpha-book#readme",
+  "devDependencies": {
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0"
+  }
 }
