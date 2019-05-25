@@ -41,6 +41,9 @@ The way I tried to approach it with TypeScript deep dive was present *just a lit
 
 But now, I would rather write a definitive book on TypeScript without trying to sway the reader in a particular direction. Good practices and ideas will ofcourse be encouraged, but the objective will be to teach *TypeScript + JavaScript* only seperating the two when it makes it easy to grasp the idea, but otherwise not worrying about it.  
 
+## Co-Location of related information
+Just like there is an interdependence between JavaScript and TypeScript concepts, there is an interdependence between various features of the langauges. In such cases we will choose to focus on co-location of information as much as possible e.g. co-locating type guards `in`,`typeof`, `instanceof` even though these concepts can be discussed in their own right.
+
 ## TypeScript - The emitter
 Right before TypeScript came out, JavaScript *the language* was fairly stagnant. Then TypeScript happened, next Babel / ES6 happened. One of the challenges of teaching TypeScript at that point was the fact that ideally you had to teach even existing JavaScript developers ES6, and then you also had to explain how the TypeScript you wrote would get converted to JavaScript as you often had to debug the generated JavaScript.
 
@@ -60,9 +63,9 @@ So, as I've left the compiler / language service ecosystem (at least taking a br
 ## TypeScript - The ecosystem
 JavaScript is everywhere. And TypeScript is everywhere JavaScript is (and more e.g. [assemblyscript](https://github.com/AssemblyScript/assemblyscript)). 
 
-I cover a few of these in TypeScript deep dive (e.g. cypress, react). However it wasn't the focus of the book. I plan to write seperate books for the popular ecosystems instead of just little sections in this book. 
+I cover a few of these in TypeScript deep dive (e.g. react, cypress). However it wasn't the focus of the book. I plan to write seperate books for the popular ecosystems instead of just little sections in this book. 
 
-The intention of this book is to cover the languages (JavaScript and TypeScript) as much as possible without dragging the user down into the JavaScript ecosystem.
+The intention of this book is to cover the languages (JavaScript and TypeScript) as much as possible without dragging through the JavaScript ecosystem.
 
 ## Why not TypeScript deep dive 2nd Edition 
 I could definitely call this book that. However there are a few reasons for not doing it that way: 
