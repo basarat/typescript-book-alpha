@@ -1,5 +1,3 @@
 ## Variables
 
-Variables are defined in JavaScript / TypeSript using `let` and `const`.
-
-### `const`
+Variables are defined in JavaScript / TypeScript using `let` and `const`.
