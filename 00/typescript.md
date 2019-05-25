@@ -19,10 +19,7 @@ TypeScript is just JavaScript with types to help.
 
 ### Catching JavaScript Errors 
 
-> Using TypeScript is like having Anders teaching you how to write good clean JavaScript
-
-
-TypeScript will try to protect you from portions of JavaScript that never worked (so you don't need to remember this stuff):
+I have a saying, "TypeScript is like Anders doing a code review for your JavaScript". TypeScript will try to protect you from portions of JavaScript that never worked (so you don't need to remember this stuff):
 
 ```ts
 [] + []; // JavaScript will give you "" (which makes little sense), TypeScript will error
