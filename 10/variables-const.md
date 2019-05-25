@@ -66,4 +66,3 @@ if (foo === 456) { // TS Error: types `123` and `456` have no overlap
 
 }
 ```
-
