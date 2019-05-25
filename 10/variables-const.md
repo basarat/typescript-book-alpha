@@ -1,5 +1,9 @@
 ### `const`
-`const` allows you to create a variable that can never be re-assigned. Here is an example that defines a variable using `const`: 
+> `const` is the preferred way to create variables. 
+
+`const` allows you to create a variable that can never be re-assigned. 
+
+Here is an example that defines a variable using `const`: 
 
 ```ts
 const foo = 123;
@@ -10,20 +14,6 @@ Since `const` prevents reassignment, the following will be pointed out as an err
 ```ts
 const foo = 123;
 foo = 456; // TS Error : Cannot assign to `foo` because it is a constant
-```
-
-#### Use case: Magic Literals
-`const` is a good practice for both readability and maintainability and avoids using *magic literals* e.g.
-
-```ts
-// Low readability
-if (x > 10) {
-}
-
-// Better!
-const maxRows = 10;
-if (x > maxRows) {
-}
 ```
 
 #### const declarations must be initialized
@@ -66,3 +56,29 @@ if (foo === 456) { // TS Error: types `123` and `456` have no overlap
 
 }
 ```
+
+#### Deep immutability
+`const` only prevents reassignments (`=`) to happen to the variable. However, it still allows sub properties of objects to be mutated, as shown below:
+
+```ts
+const foo = { bar: 123 };
+foo.bar = 456; // Allowed!
+console.log(foo); // { bar: 456 }
+```
+
+#### Use case: Magic Literals
+`const` is a good practice for both readability and maintainability and avoids using *magic literals* e.g.
+
+```ts
+// Low readability
+if (x > 10) {
+}
+
+// Better!
+const maxRows = 10;
+if (x > maxRows) {
+}
+```
+
+#### Prefer const
+Always use `const`. Unless you plan to either lazily initialization of a variable, or do a reassignment (use `let` for those cases which we will cover next).
