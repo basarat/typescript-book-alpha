@@ -40,5 +40,8 @@ function add(a,b) {
 }
 ```
 
+### Summary 
+
+TypeScript is probably the safest and easiest way to learn JavaScript.
+
 * TODO: https://basarat.gitbooks.io/typescript/content/docs/getting-started.html
-* TODO: https://basarat.gitbooks.io/typescript/content/docs/why-typescript.html types can be explicit, inferred and are structural, type errors do not prevent emit, ambient types. 
