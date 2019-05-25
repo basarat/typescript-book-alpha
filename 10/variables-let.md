@@ -26,9 +26,12 @@ let foo: number;
 // Later do some assignment
 ```
 
+> Always explicitly annotate the type if you are not going to assign on creation
+
 If you are not going to do an assignment immediately, you should add a type annotation (in our example we added `: number`). Otherwise, TypeScript will infer `any` which is very unsafe type we will talk about later.
 
-#### Similarity with const
-Other than the assignment/reassignment difference, `const` and `let` are mostly the same. Here are a few facts about `let/const` worth mentioning again: 
+#### Block Scoped
+`let` is block scoped just like `const`.
 
-* They are block scoped.
+#### Similarity with const
+Other than the assignment/reassignment difference, `const` and `let` are the same. 
