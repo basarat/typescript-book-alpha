@@ -18,6 +18,8 @@ This type inference is well motivated. If you do stuff like shown in this exampl
 
 ### Structural typing
 
+> We will discuss `interface`, `number` later. But the code should make some intutive sense at this point.
+
 In some languages (specifically nominally typed ones) static typing results in unnecessary ceremony because even though *you know* that the code will work fine the language semantics force you to copy stuff around. This is why stuff like [automapper for C#](http://automapper.org/) is *vital* for C#. 
 
 In TypeScript because we really want it to be easy for JavaScript developers with a minimum cognitive overload, types are *structural*. This means that *duck typing* is a first class language construct. Consider the following example. The function `iTakePoint2D` will accept anything that contains all the things (`x` and `y`) it expects:
@@ -60,4 +62,28 @@ So you can incrementally upgrade your JavaScript code to TypeScript.
 
 > If you don't want to emit any JavaScript if there is a TypeScript error there is a typescript option that you can set `'noEmitOnError' : true`.
 
-* TODO: https://basarat.gitbooks.io/typescript/content/docs/why-typescript.html types can be explicit, inferred and are structural, type errors do not prevent emit, ambient types. 
+### Types can be ambient
+> We will discuss the details of creating TypeScript definitions for existing JavaScript in detail later once you know more about TypeScript (e.g. stuff like `interface` and `any`).
+
+A major design goal of TypeScript was to make it possible for you to safely and easily use existing JavaScript libraries in TypeScript. TypeScript does this by means of *declaration*. TypeScript provides you with a sliding scale of how much or how little effort you want to put in your declarations, the more effort you put the more type safety + code intelligence you get. Note that definitions for most of the popular JavaScript libraries have already been written for you by the [DefinitelyTyped community](https://github.com/borisyankov/DefinitelyTyped) so for most purposes either:
+
+1. The definition file already exists.
+1. Or at the very least, you have a vast list of well reviewed TypeScript declaration templates already available
+
+As a quick example of how you would author your own declaration file, consider a trivial example of [jquery](https://jquery.com/). By default (as is to be expected of good JS code) TypeScript expects you to declare (i.e. use `var` somewhere) before you use a variable
+```ts
+$('.awesome').show(); // Error: cannot find name `$`
+```
+As a quick fix *you can tell TypeScript* that there is indeed something called `$`:
+```ts
+declare let $: any;
+$('.awesome').show(); // Okay!
+```
+If you want you can build on this basic definition and provide more information to help protect you from errors:
+```ts
+declare let $: {
+    (selector:string): any;
+};
+$('.awesome').show(); // Okay!
+$(123).show(); // Error: selector needs to be a string
+```
