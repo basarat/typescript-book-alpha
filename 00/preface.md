@@ -48,7 +48,7 @@ This is vastly no longer the case. I rarely see developers around me being aware
 
 So, I will leave them out to give you the best value for your time. They might be covered later as an appendix (as they are good to know) but they will not be the part of the main flow of the book.
 
-## TypeScript the language service
+## TypeScript - The language service
 Early on in the TypeScript ecosystem, I was doing a lot of work on TypeScript tooling as well (with atom-typescript and later alm tools) as the only official supported implementation was the windows on VSCode of the time.
 
 So it made sense for me to add whatever I was learning, and sharing it in the book. However the compiler internals have moved on since then. They are still vaslty the same (there is still a file called `checker.ts`, there is still a `binder`, symbols still mean what they used to mean). However the internal and external apis are probably changed (if even slightly). 
@@ -57,10 +57,17 @@ TypeScript team is amazing. They released VSCode and it took the IDE environment
 
 So, as I've left the compiler / language service ecosystem (at least taking a break), I am not going to cover them here, as I plan to keep this guide much more easy to keep up to date compared to the previous attempt. 
 
+## TypeScript - The ecosystem
+JavaScript is everywhere. And TypeScript is everywhere JavaScript is (and more e.g. [assemblyscript](https://github.com/AssemblyScript/assemblyscript)). 
+
+I cover a few of these in TypeScript deep dive (e.g. cypress, react). However it wasn't the focus of the book. I plan to write seperate books for the popular ecosystems instead of just little sections in this book. 
+
+The intention of this book is to cover the languages (JavaScript and TypeScript) as much as possible without dragging the user down into the JavaScript ecosystem.
+
 ## Why not TypeScript deep dive 2nd Edition 
 I could definitely call this book that. However there are a few reasons for not doing it that way: 
 
 * Don't break the internet: TypeScript deep dive is very popular. Lots of the public internet (including stackoverflow) and private internet links to it. I'd rahter not break those links.
-* Creating a second edition that's vastly different (a different approach to teaching TypeScript as I've called it), is just poor expectation managment. 
+* Creating a second edition that's vastly different (a different approach to teaching TypeScript as I've called it + focus on the language), is just poor expectation managment. 
 
 So here you have it, a new book. Hope it makes your life easier 🌹
