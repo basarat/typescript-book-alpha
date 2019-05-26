@@ -6,3 +6,5 @@
 * [Variables](10/variables)
 * [const](10/variables-const)
 * [let](10/variables-let)
+* [number](10/number)
+* [string](10/string)

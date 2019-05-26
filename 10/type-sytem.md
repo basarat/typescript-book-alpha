@@ -16,6 +16,23 @@ foo = '456'; // Error: cannot assign `string` to `number`
 ```
 This type inference is well motivated. If you do stuff like shown in this example, then, in the rest of your code, you cannot be certain that `foo` is a `number` or a `string`. Such issues turn up often in large multi-file code bases. We will deep dive into the type inference rules later.
 
+### Explicit type annotations
+As we've mentioned before, TypeScript will infer as much as it can safely. However, you can use annotations to:
+1. Help along the compiler if inference breaks down.
+1. Document stuff for the next developer who has to read your code (that might be future you!).
+1. Enforce that what the compiler sees, is what you thought it should see i.e. your understanding of the code matches an algorithmic analysis of the code (done by the compiler).
+
+TypeScript uses postfix type annotations (`: <SomeType>`) popular in other *optionally* annotated languages (e.g. ActionScript and F#). e.g we are annotating the variable to be of type `number` below:
+
+```ts
+let foo: number = 123;
+```
+So if you do something wrong the compiler will error e.g.:
+
+```ts
+let foo: number = '123'; // Error: cannot assign a `string` to a `number`
+```
+
 ### Structural typing
 
 > We will discuss `interface`, `number` later. But the code should make some intutive sense at this point.
