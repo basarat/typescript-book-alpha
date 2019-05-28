@@ -8,3 +8,4 @@
 * [let](10/variables-let)
 * [number](10/number)
 * [string](10/string)
+* [string](10/boolean)

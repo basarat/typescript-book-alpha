@@ -12,18 +12,42 @@ foo = 123;
 foo = 456.798;
 ```
 
-### Arithmetic operators
-Arithmetic operations (+,-,*,/,%) work on numbers the same as you would expect:
+### Arithmetic Operators
+Arithmetic operations (+,-,*,/,%,**) work on numbers the same as you would expect:
 
 ```ts
 const foo = 3;
 const bar = 5;
-console.log(foo + 1); // 4
-console.log(foo / bar); // 0.6
-console.log(foo * bar); // 15
-console.log(foo - bar); // -2;
+console.log(foo + 1); // addition: 4
+console.log(foo / bar); // division: 0.6
+console.log(foo * bar); // multiplication: 15
+console.log(foo - bar); // subtraction: -2;
 console.log(foo % 2); // remainder: 1
+console.log(foo ** 2); // exponentiation: 9
 ```
+
+In addition, JavaScript also has these as *assignment* operators e.g. `+=` is called *addition assignment operator*. They just expand to operator followed by assignment e.g. `x+= y` is same as `x = x + y`. 
+
+```ts
+let foo = 123;
+foo += 1;
+console.log(foo); // 124
+```
+
+List of assignment operators : `+=` `-=` `*=` `/=` `%=` `*=`
+
+### Bitwise opeators 
+TODO
+```
+<< left shift
+>> right shift 
+>>> unsigned right shift
+ 
+& 
+|
+^
+```
+They also have assignment variants (e.g. `&=`)
 
 ### number limitations
 Below we discuss its limitations along with a recommended solution.

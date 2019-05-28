@@ -4,6 +4,7 @@
 - sub sections : https://basarat.gitbooks.io/typescript/content/docs/javascript/recap.html
 
 - File names that start with todo 
+- `Number` `String` `Boolean` with horrible names. 
 
 
 # When working 
